@@ -1,8 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt update -y
-RUN apt install -y apt-transport-https ca-certificates \
-      lxc iptables curl python3-pip
+RUN apt install -y wget bzip2 make
 
 # CONDA
 ARG CONDA_INSTALL_PATH=/opt/conda
