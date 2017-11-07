@@ -16,6 +16,8 @@ ENV PATH=$CONDA_INSTALL_PATH/bin:$PATH
 
 # install via pip
 RUN conda install -c conda-forge oommfc
+# this installs the conda-forge tk, the default tk doesn't work:
+RUN conda install -c conda-forge tk
 
 # make the Makefile available
 RUN mkdir /io
