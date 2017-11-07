@@ -17,8 +17,6 @@ test:
 	$(PYTHON) -c "import sys; import discretisedfield as d; sys.exit(d.test())"
 	$(PYTHON) -c "import sys; import micromagneticmodel as m; sys.exit(m.test())"
 	$(PYTHON) -c "import sys; import oommfc as m; sys.exit(m.test())"
-	@# debug: show log file of OOMMF
-	cat /opt/conda/opt/oommf/boxsi.errors
 	@# We haven't got a joommf conda package yet
 	@# $(PYTHON) -c "import sys; import joommf"
 
