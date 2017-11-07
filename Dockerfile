@@ -3,6 +3,9 @@ FROM ubuntu:latest
 RUN apt update -y
 RUN apt install -y wget bzip2 make
 
+# Turns out we need libX11-6
+RUN apt install -y libx11-6
+
 # CONDA
 ARG CONDA_INSTALL_PATH=/opt/conda
 RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh \
